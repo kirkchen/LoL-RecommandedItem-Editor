@@ -2,7 +2,7 @@
 * 2012/03/24 - version v1.0.1203.2401 - bug fix - by Kirk
 
 Feature:
-1. 將Image, Data 加入專案
+1. 將Image, Data 加入專案, 移除Setup Project圖檔, 改由ProjectOutput讀取
 2. 更名 item_cost.txt => item_cost.ini
 
 Bugs fix:
