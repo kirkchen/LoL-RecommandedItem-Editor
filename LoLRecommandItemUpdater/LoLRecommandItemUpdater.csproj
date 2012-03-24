@@ -90,21 +90,21 @@
     <EmbeddedResource Include="RecommandItemEditor.resx">
       <DependentUpon>RecommandItemEditor.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Data\champs.ini">
+    <Content Include="Data\champs.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\classic_items.ini">
+    </Content>
+    <Content Include="Data\classic_items.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\config.ini">
+    </Content>
+    <Content Include="Data\config.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\dominion_items.ini">
+    </Content>
+    <Content Include="Data\dominion_items.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\item_cost.ini">
+    </Content>
+    <Content Include="Data\item_cost.ini">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
