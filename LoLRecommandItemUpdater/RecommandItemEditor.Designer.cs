@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecommandItemEditor));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LabelSourceType = new System.Windows.Forms.Label();
             this.LabelRoot = new System.Windows.Forms.Label();
@@ -489,6 +490,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 488);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RecommandItemEditor";
             this.Text = "英雄聯盟推薦物品編輯器";
             this.Load += new System.EventHandler(this.RecommandItemEditor_Load);

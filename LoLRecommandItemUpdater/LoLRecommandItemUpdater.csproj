@@ -116,6 +116,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon.ico" />
     <Content Include="Images\champions_files\Ahri.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
