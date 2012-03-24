@@ -370,8 +370,8 @@ namespace LoLRecommandItemUpdater
             if (Directory.Exists(outputFolder))
             {
                 File.Delete(classicFile);
-                File.Delete(dominionFile);                
-                
+                File.Delete(dominionFile);
+
                 MessageBox.Show("已刪除該英雄的設定檔", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.ResetRecommandItem();
@@ -382,7 +382,59 @@ namespace LoLRecommandItemUpdater
 
                 this.ResetRecommandItem();
             }
+        }
 
+        /// <summary>
+        /// Handles the Click event of the ToolStripMenuItemAbout control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+        private void ToolStripMenuItemAbout_Click(object sender, EventArgs e)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            builder.AppendLine("原作者: Dohzr 製作於： Sep 01, 2011");
+            builder.AppendLine("LoL ID: Dohzr");
+            builder.AppendLine("Xfire: Dohzr");
+            builder.AppendLine("中文化+修改: chjimmy@PTT");
+            builder.AppendLine("程式碼重整: kirkchen");
+            builder.AppendLine("特別感謝: YUPTT(全英雄中文化程式碼)");            
+
+            MessageBox.Show(null, builder.ToString(), "關於", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /// <summary>
+        /// Handles the Click event of the ToolStripMenuItemReadFromGameFolder control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+        private void ToolStripMenuItemReadFromGameFolder_Click(object sender, EventArgs e)
+        {
+            this.RadioButtonGameFolder.Checked = true;
+
+            this.ButtonReadData_Click(sender, e);
+        }
+
+        /// <summary>
+        /// Handles the Click event of the ToolStripMenuItemReadFromFile control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+        private void ToolStripMenuItemReadFromFile_Click(object sender, EventArgs e)
+        {
+            this.RadioButtonFileFolder.Checked = true;
+
+            this.ButtonReadData_Click(sender, e);
+        }
+
+        /// <summary>
+        /// Handles the Click event of the ToolStripMenuItemExit control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+        private void ToolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         /// <summary>
@@ -453,6 +505,8 @@ namespace LoLRecommandItemUpdater
             this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
             this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
             this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
+
+            this.DisplayRecommandItemsPrice();
         }
 
         /// <summary>

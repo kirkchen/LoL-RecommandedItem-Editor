@@ -59,6 +59,15 @@
             this.ButtonSaveToGameFolder = new System.Windows.Forms.Button();
             this.ButtonSaveToFileFolder = new System.Windows.Forms.Button();
             this.LabelItemPrice = new System.Windows.Forms.Label();
+            this.MenuStripDefault = new System.Windows.Forms.MenuStrip();
+            this.檔案ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.讀取設定檔ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemReadFromGameFolder = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemReadFromFile = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.關於ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.關於ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +80,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRecItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRecItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRecItem6)).BeginInit();
+            this.MenuStripDefault.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -93,7 +103,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -103,7 +113,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(739, 488);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(739, 464);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // LabelSourceType
@@ -354,7 +364,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(733, 192);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(733, 168);
             this.tableLayoutPanel3.TabIndex = 10;
             // 
             // PictureBoxRecItem1
@@ -451,7 +461,7 @@
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.ButtonSaveToGameFolder, 2);
             this.ButtonSaveToGameFolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSaveToGameFolder.Location = new System.Drawing.Point(209, 154);
+            this.ButtonSaveToGameFolder.Location = new System.Drawing.Point(209, 142);
             this.ButtonSaveToGameFolder.Name = "ButtonSaveToGameFolder";
             this.ButtonSaveToGameFolder.Size = new System.Drawing.Size(154, 24);
             this.ButtonSaveToGameFolder.TabIndex = 7;
@@ -463,7 +473,7 @@
             // 
             this.tableLayoutPanel3.SetColumnSpan(this.ButtonSaveToFileFolder, 2);
             this.ButtonSaveToFileFolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ButtonSaveToFileFolder.Location = new System.Drawing.Point(369, 154);
+            this.ButtonSaveToFileFolder.Location = new System.Drawing.Point(369, 142);
             this.ButtonSaveToFileFolder.Name = "ButtonSaveToFileFolder";
             this.ButtonSaveToFileFolder.Size = new System.Drawing.Size(154, 24);
             this.ButtonSaveToFileFolder.TabIndex = 8;
@@ -484,13 +494,86 @@
             this.LabelItemPrice.TabIndex = 9;
             this.LabelItemPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // MenuStripDefault
+            // 
+            this.MenuStripDefault.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.檔案ToolStripMenuItem,
+            this.關於ToolStripMenuItem});
+            this.MenuStripDefault.Location = new System.Drawing.Point(0, 0);
+            this.MenuStripDefault.Name = "MenuStripDefault";
+            this.MenuStripDefault.Size = new System.Drawing.Size(739, 24);
+            this.MenuStripDefault.TabIndex = 1;
+            this.MenuStripDefault.Text = "menuStrip1";
+            // 
+            // 檔案ToolStripMenuItem
+            // 
+            this.檔案ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.讀取設定檔ToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.ToolStripMenuItemExit});
+            this.檔案ToolStripMenuItem.Name = "檔案ToolStripMenuItem";
+            this.檔案ToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.檔案ToolStripMenuItem.Text = "檔案";
+            // 
+            // 讀取設定檔ToolStripMenuItem
+            // 
+            this.讀取設定檔ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemReadFromGameFolder,
+            this.ToolStripMenuItemReadFromFile});
+            this.讀取設定檔ToolStripMenuItem.Name = "讀取設定檔ToolStripMenuItem";
+            this.讀取設定檔ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.讀取設定檔ToolStripMenuItem.Text = "讀取設定檔";
+            // 
+            // ToolStripMenuItemReadFromGameFolder
+            // 
+            this.ToolStripMenuItemReadFromGameFolder.Name = "ToolStripMenuItemReadFromGameFolder";
+            this.ToolStripMenuItemReadFromGameFolder.Size = new System.Drawing.Size(172, 22);
+            this.ToolStripMenuItemReadFromGameFolder.Text = "從遊戲資料夾讀取";
+            this.ToolStripMenuItemReadFromGameFolder.Click += new System.EventHandler(this.ToolStripMenuItemReadFromGameFolder_Click);
+            // 
+            // ToolStripMenuItemReadFromFile
+            // 
+            this.ToolStripMenuItemReadFromFile.Name = "ToolStripMenuItemReadFromFile";
+            this.ToolStripMenuItemReadFromFile.Size = new System.Drawing.Size(172, 22);
+            this.ToolStripMenuItemReadFromFile.Text = "從檔案讀取";
+            this.ToolStripMenuItemReadFromFile.Click += new System.EventHandler(this.ToolStripMenuItemReadFromFile_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // ToolStripMenuItemExit
+            // 
+            this.ToolStripMenuItemExit.Name = "ToolStripMenuItemExit";
+            this.ToolStripMenuItemExit.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItemExit.Text = "離開";
+            this.ToolStripMenuItemExit.Click += new System.EventHandler(this.ToolStripMenuItemExit_Click);
+            // 
+            // 關於ToolStripMenuItem
+            // 
+            this.關於ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.關於ToolStripMenuItem1});
+            this.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem";
+            this.關於ToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.關於ToolStripMenuItem.Text = "說明";
+            // 
+            // 關於ToolStripMenuItem1
+            // 
+            this.關於ToolStripMenuItem1.Name = "關於ToolStripMenuItem1";
+            this.關於ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.關於ToolStripMenuItem1.Text = "關於";
+            this.關於ToolStripMenuItem1.Click += new System.EventHandler(this.ToolStripMenuItemAbout_Click);
+            // 
             // RecommandItemEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 488);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.MenuStripDefault);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.MenuStripDefault;
             this.Name = "RecommandItemEditor";
             this.Text = "英雄聯盟推薦物品編輯器";
             this.Load += new System.EventHandler(this.RecommandItemEditor_Load);
@@ -511,7 +594,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRecItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRecItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxRecItem6)).EndInit();
+            this.MenuStripDefault.ResumeLayout(false);
+            this.MenuStripDefault.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -547,5 +633,14 @@
         private System.Windows.Forms.Label LabelHeroName;
         private System.Windows.Forms.Label LabelItemPrice;
         private System.Windows.Forms.Button ButtonReadData;
+        private System.Windows.Forms.MenuStrip MenuStripDefault;
+        private System.Windows.Forms.ToolStripMenuItem 檔案ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 關於ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 關於ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 讀取設定檔ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemReadFromGameFolder;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemReadFromFile;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemExit;
     }
 }
