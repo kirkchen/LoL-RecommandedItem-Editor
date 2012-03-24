@@ -135,7 +135,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                 this.RecommandItems[1] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -154,7 +154,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                 this.RecommandItems[2] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -173,7 +173,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                 this.RecommandItems[3] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -192,7 +192,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                 this.RecommandItems[4] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -211,7 +211,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                 this.RecommandItems[5] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -230,7 +230,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                 this.RecommandItems[6] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -402,13 +402,13 @@ namespace LoLRecommandItemUpdater
         {
             if (this.SelectedHero != null)
             {
-                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + @"\images\champions_files\" + this.SelectedHero.Name + ".jpg");
+                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImageRootFolder() + this.SelectedHero.Name + ".jpg");
 
                 this.LabelHeroName.Text = this.SelectedHero.ChineseName;
             }
             else
             {
-                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + @"\images\champions_files\Empty.jpg");
+                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImageRootFolder() + "Empty.jpg");
 
                 this.LabelHeroName.Text = "尚未選擇";
             }
@@ -440,12 +440,12 @@ namespace LoLRecommandItemUpdater
                                       { 6 , null },
                                   };
 
-            this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\----.gif"); ;
-            this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\----.gif"); ; ;
-            this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\----.gif"); ; ;
-            this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\----.gif"); ; ;
-            this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\----.gif"); ; ;
-            this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\----.gif"); ; ;
+            this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ;
+            this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
+            this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
+            this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
+            this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
+            this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
         }
 
         /// <summary>
@@ -525,12 +525,12 @@ namespace LoLRecommandItemUpdater
 
             if (this.RecommandItems.Where(i => i.Value == null).Count() == 0)
             {
-                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + this.RecommandItems[1].Code + ".gif");
-                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + this.RecommandItems[2].Code + ".gif");
-                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + this.RecommandItems[3].Code + ".gif");
-                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + this.RecommandItems[4].Code + ".gif");
-                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + this.RecommandItems[5].Code + ".gif");
-                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + this.RecommandItems[6].Code + ".gif");
+                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[1].Code + ".gif");
+                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[2].Code + ".gif");
+                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[3].Code + ".gif");
+                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[4].Code + ".gif");
+                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[5].Code + ".gif");
+                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[6].Code + ".gif");
 
                 this.DisplayRecommandItemsPrice();
             }

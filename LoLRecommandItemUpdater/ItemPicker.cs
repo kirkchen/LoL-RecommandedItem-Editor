@@ -369,7 +369,7 @@ namespace LoLRecommandItemUpdater
                 {
                     PictureBox itemPicture = new PictureBox();
                     itemPicture.Name = item.Code.ToString();
-                    itemPicture.Image = Image.FromFile(Application.StartupPath + @"\images\items_files\" + item.Code + ".gif");
+                    itemPicture.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
                     itemPicture.Size = new Size(80, 80);
                     itemPicture.SizeMode = PictureBoxSizeMode.StretchImage;
                     itemPicture.Click += new EventHandler(ItemPicture_Click);

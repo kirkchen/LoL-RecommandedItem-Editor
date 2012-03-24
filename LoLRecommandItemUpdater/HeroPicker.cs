@@ -120,7 +120,7 @@ namespace LoLRecommandItemUpdater
                 {
                     PictureBox itemPicture = new PictureBox();
                     itemPicture.Name = item.Name.ToString();
-                    itemPicture.Image = Image.FromFile(Application.StartupPath + @"\images\champions_files\" + item.Name + ".jpg");
+                    itemPicture.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImageRootFolder() + item.Name + ".jpg");
                     itemPicture.Size = new Size(80, 80);
                     itemPicture.SizeMode = PictureBoxSizeMode.StretchImage;
                     itemPicture.Click += new EventHandler(ItemPicture_Click);
