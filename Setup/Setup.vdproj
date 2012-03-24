@@ -335,7 +335,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_842B415EBC6C414B9AF2A37CAAA9285F"
             {
-            "Name" = "8:LoL RecommandItem Updater"
+            "Name" = "8:英雄聯盟推薦物品編輯器"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

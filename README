@@ -4,9 +4,11 @@
 Feature:
 1. 將Image, Data 加入專案, 移除Setup Project圖檔, 改由ProjectOutput讀取
 2. 更名 item_cost.txt => item_cost.ini
+3. 安裝包中文化, 修正產品名稱
 
 Bugs fix:
 1. 修正一開始選擇道具會顯示所有地圖的道具 => 預設為召喚峽谷
 2. 修正選過一項道具後, 再選擇其他道具會選框會停留在前一個選取的道具 => 還原為未選取
 3. 修正Item Picker Checkbox邏輯, 全部未選為FilterItemType.All, 取消全部勾選按鈕, 只保留重置為未選取按鈕
 4. 修正刪檔邏輯, 不刪除資料夾結構, 只刪除設定檔 (避免刪除遊戲資料夾中的原有檔案)
+5. 修正第一個英雄選擇阿璃時, 無法Highlight英雄的錯誤

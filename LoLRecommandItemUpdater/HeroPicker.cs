@@ -68,7 +68,7 @@ namespace LoLRecommandItemUpdater
                     (control as PictureBox).BackColor = Color.Transparent;
                 }
 
-                if (control.Name == this.ComboBoxHeroName.SelectedValue.ToString())
+                if (this.ComboBoxHeroName.SelectedValue != null && control.Name == this.ComboBoxHeroName.SelectedValue.ToString())
                 {
                     var itemPicture = control as PictureBox;
                     itemPicture.BackColor = Color.Red;
@@ -112,7 +112,7 @@ namespace LoLRecommandItemUpdater
         /// </summary>
         private void DisplayHeroes()
         {
-            var result = this.m_dataRepository.GetHeroes();
+            var result = this.m_dataRepository.GetHeroes();           
 
             if (this.FlowLayoutPanelHero.Controls.Count == 0)
             {
@@ -142,7 +142,9 @@ namespace LoLRecommandItemUpdater
                 this.ComboBoxHeroName.DataSource = new BindingSource(result, null);
                 this.ComboBoxHeroName.DisplayMember = "ChineseName";
                 this.ComboBoxHeroName.ValueMember = "Name";
-            }
+
+                this.ComboBoxHeroName.SelectedIndex = -1;
+            }            
         }
 
         /// <summary>
