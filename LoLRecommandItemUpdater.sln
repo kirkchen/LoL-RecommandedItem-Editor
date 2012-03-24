@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoLRecommandItemUpdater", "LoLRecommandItemUpdater\LoLRecommandItemUpdater.csproj", "{62B740E6-0966-41D7-B4E2-32D4E3C21387}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{348D7E7D-55A6-42E9-BE68-5F9198B0444E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62B740E6-0966-41D7-B4E2-32D4E3C21387}.Debug|x86.ActiveCfg = Debug|x86
+		{62B740E6-0966-41D7-B4E2-32D4E3C21387}.Debug|x86.Build.0 = Debug|x86
+		{62B740E6-0966-41D7-B4E2-32D4E3C21387}.Release|x86.ActiveCfg = Release|x86
+		{62B740E6-0966-41D7-B4E2-32D4E3C21387}.Release|x86.Build.0 = Release|x86
+		{348D7E7D-55A6-42E9-BE68-5F9198B0444E}.Debug|x86.ActiveCfg = Debug
+		{348D7E7D-55A6-42E9-BE68-5F9198B0444E}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
