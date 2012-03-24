@@ -60,8 +60,8 @@
             this.ButtonSeletectAll = new System.Windows.Forms.Button();
             this.ButtonUnSelectAll = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LabelItemName = new System.Windows.Forms.Label();
             this.TextBoxItemName = new System.Windows.Forms.TextBox();
+            this.LabelItemName = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -142,8 +142,6 @@
             // CheckboxMagicResist
             // 
             this.CheckboxMagicResist.AutoSize = true;
-            this.CheckboxMagicResist.Checked = true;
-            this.CheckboxMagicResist.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxMagicResist.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxMagicResist.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.CheckboxMagicResist.Location = new System.Drawing.Point(3, 90);
@@ -152,13 +150,11 @@
             this.CheckboxMagicResist.TabIndex = 3;
             this.CheckboxMagicResist.Text = "魔法防禦";
             this.CheckboxMagicResist.UseVisualStyleBackColor = true;
-            this.CheckboxMagicResist.Click += new System.EventHandler(this.CheckboxMagicResist_Click);
+            this.CheckboxMagicResist.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxHealthRegen
             // 
             this.CheckboxHealthRegen.AutoSize = true;
-            this.CheckboxHealthRegen.Checked = true;
-            this.CheckboxHealthRegen.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxHealthRegen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxHealthRegen.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.CheckboxHealthRegen.Location = new System.Drawing.Point(3, 61);
@@ -167,13 +163,11 @@
             this.CheckboxHealthRegen.TabIndex = 2;
             this.CheckboxHealthRegen.Text = "生命回復";
             this.CheckboxHealthRegen.UseVisualStyleBackColor = true;
-            this.CheckboxHealthRegen.Click += new System.EventHandler(this.CheckboxHealthRegen_Click);
+            this.CheckboxHealthRegen.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxArmor
             // 
             this.CheckboxArmor.AutoSize = true;
-            this.CheckboxArmor.Checked = true;
-            this.CheckboxArmor.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxArmor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxArmor.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.CheckboxArmor.Location = new System.Drawing.Point(3, 32);
@@ -182,13 +176,11 @@
             this.CheckboxArmor.TabIndex = 1;
             this.CheckboxArmor.Text = "物理防禦";
             this.CheckboxArmor.UseVisualStyleBackColor = true;
-            this.CheckboxArmor.Click += new System.EventHandler(this.CheckboxArmor_Click);
+            this.CheckboxArmor.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxHealth
             // 
             this.CheckboxHealth.AutoSize = true;
-            this.CheckboxHealth.Checked = true;
-            this.CheckboxHealth.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxHealth.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxHealth.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.CheckboxHealth.Location = new System.Drawing.Point(3, 3);
@@ -197,7 +189,7 @@
             this.CheckboxHealth.TabIndex = 0;
             this.CheckboxHealth.Text = "生命";
             this.CheckboxHealth.UseVisualStyleBackColor = true;
-            this.CheckboxHealth.Click += new System.EventHandler(this.CheckboxHealth_Click);
+            this.CheckboxHealth.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // groupBox2
             // 
@@ -235,8 +227,6 @@
             // CheckboxDamage
             // 
             this.CheckboxDamage.AutoSize = true;
-            this.CheckboxDamage.Checked = true;
-            this.CheckboxDamage.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxDamage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxDamage.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.CheckboxDamage.Location = new System.Drawing.Point(3, 3);
@@ -245,13 +235,11 @@
             this.CheckboxDamage.TabIndex = 1;
             this.CheckboxDamage.Text = "物理攻擊";
             this.CheckboxDamage.UseVisualStyleBackColor = true;
-            this.CheckboxDamage.Click += new System.EventHandler(this.CheckboxDamage_Click);
+            this.CheckboxDamage.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxCriticalStrike
             // 
             this.CheckboxCriticalStrike.AutoSize = true;
-            this.CheckboxCriticalStrike.Checked = true;
-            this.CheckboxCriticalStrike.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxCriticalStrike.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxCriticalStrike.Location = new System.Drawing.Point(3, 32);
             this.CheckboxCriticalStrike.Name = "CheckboxCriticalStrike";
@@ -259,13 +247,11 @@
             this.CheckboxCriticalStrike.TabIndex = 2;
             this.CheckboxCriticalStrike.Text = "爆擊";
             this.CheckboxCriticalStrike.UseVisualStyleBackColor = true;
-            this.CheckboxCriticalStrike.Click += new System.EventHandler(this.CheckboxCriticalStrike_Click);
+            this.CheckboxCriticalStrike.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxAttackSpeed
             // 
             this.CheckboxAttackSpeed.AutoSize = true;
-            this.CheckboxAttackSpeed.Checked = true;
-            this.CheckboxAttackSpeed.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxAttackSpeed.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxAttackSpeed.Location = new System.Drawing.Point(3, 61);
             this.CheckboxAttackSpeed.Name = "CheckboxAttackSpeed";
@@ -273,13 +259,11 @@
             this.CheckboxAttackSpeed.TabIndex = 3;
             this.CheckboxAttackSpeed.Text = "攻速";
             this.CheckboxAttackSpeed.UseVisualStyleBackColor = true;
-            this.CheckboxAttackSpeed.Click += new System.EventHandler(this.CheckboxAttackSpeed_Click);
+            this.CheckboxAttackSpeed.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxLifeSteal
             // 
             this.CheckboxLifeSteal.AutoSize = true;
-            this.CheckboxLifeSteal.Checked = true;
-            this.CheckboxLifeSteal.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxLifeSteal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxLifeSteal.Location = new System.Drawing.Point(3, 90);
             this.CheckboxLifeSteal.Name = "CheckboxLifeSteal";
@@ -287,7 +271,7 @@
             this.CheckboxLifeSteal.TabIndex = 4;
             this.CheckboxLifeSteal.Text = "普攻吸血";
             this.CheckboxLifeSteal.UseVisualStyleBackColor = true;
-            this.CheckboxLifeSteal.Click += new System.EventHandler(this.CheckboxLifeSteal_Click);
+            this.CheckboxLifeSteal.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // groupBox3
             // 
@@ -328,8 +312,6 @@
             // CheckboxSpellDamage
             // 
             this.CheckboxSpellDamage.AutoSize = true;
-            this.CheckboxSpellDamage.Checked = true;
-            this.CheckboxSpellDamage.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxSpellDamage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxSpellDamage.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.CheckboxSpellDamage.Location = new System.Drawing.Point(3, 3);
@@ -338,13 +320,11 @@
             this.CheckboxSpellDamage.TabIndex = 2;
             this.CheckboxSpellDamage.Text = "魔法攻擊";
             this.CheckboxSpellDamage.UseVisualStyleBackColor = true;
-            this.CheckboxSpellDamage.Click += new System.EventHandler(this.CheckboxSpellDamage_Click);
+            this.CheckboxSpellDamage.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxCooldownReduction
             // 
             this.CheckboxCooldownReduction.AutoSize = true;
-            this.CheckboxCooldownReduction.Checked = true;
-            this.CheckboxCooldownReduction.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxCooldownReduction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxCooldownReduction.Location = new System.Drawing.Point(3, 30);
             this.CheckboxCooldownReduction.Name = "CheckboxCooldownReduction";
@@ -352,13 +332,11 @@
             this.CheckboxCooldownReduction.TabIndex = 3;
             this.CheckboxCooldownReduction.Text = "冷卻時間";
             this.CheckboxCooldownReduction.UseVisualStyleBackColor = true;
-            this.CheckboxCooldownReduction.Click += new System.EventHandler(this.CheckboxCooldownReduction_Click);
+            this.CheckboxCooldownReduction.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxMana
             // 
             this.CheckboxMana.AutoSize = true;
-            this.CheckboxMana.Checked = true;
-            this.CheckboxMana.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxMana.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxMana.Location = new System.Drawing.Point(3, 57);
             this.CheckboxMana.Name = "CheckboxMana";
@@ -366,13 +344,11 @@
             this.CheckboxMana.TabIndex = 4;
             this.CheckboxMana.Text = "魔力";
             this.CheckboxMana.UseVisualStyleBackColor = true;
-            this.CheckboxMana.Click += new System.EventHandler(this.CheckboxMana_Click);
+            this.CheckboxMana.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxManaRegen
             // 
             this.CheckboxManaRegen.AutoSize = true;
-            this.CheckboxManaRegen.Checked = true;
-            this.CheckboxManaRegen.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxManaRegen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxManaRegen.Location = new System.Drawing.Point(3, 84);
             this.CheckboxManaRegen.Name = "CheckboxManaRegen";
@@ -380,13 +356,11 @@
             this.CheckboxManaRegen.TabIndex = 5;
             this.CheckboxManaRegen.Text = "魔力回復";
             this.CheckboxManaRegen.UseVisualStyleBackColor = true;
-            this.CheckboxManaRegen.Click += new System.EventHandler(this.CheckboxManaRegen_Click);
+            this.CheckboxManaRegen.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxMovement
             // 
             this.CheckboxMovement.AutoSize = true;
-            this.CheckboxMovement.Checked = true;
-            this.CheckboxMovement.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxMovement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxMovement.Location = new System.Drawing.Point(3, 111);
             this.CheckboxMovement.Name = "CheckboxMovement";
@@ -394,13 +368,11 @@
             this.CheckboxMovement.TabIndex = 6;
             this.CheckboxMovement.Text = "跑速";
             this.CheckboxMovement.UseVisualStyleBackColor = true;
-            this.CheckboxMovement.Click += new System.EventHandler(this.CheckboxMovement_Click);
+            this.CheckboxMovement.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // CheckboxConsumable
             // 
             this.CheckboxConsumable.AutoSize = true;
-            this.CheckboxConsumable.Checked = true;
-            this.CheckboxConsumable.CheckState = System.Windows.Forms.CheckState.Checked;
             this.CheckboxConsumable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CheckboxConsumable.Location = new System.Drawing.Point(3, 138);
             this.CheckboxConsumable.Name = "CheckboxConsumable";
@@ -408,7 +380,7 @@
             this.CheckboxConsumable.TabIndex = 7;
             this.CheckboxConsumable.Text = "消耗品";
             this.CheckboxConsumable.UseVisualStyleBackColor = true;
-            this.CheckboxConsumable.Click += new System.EventHandler(this.CheckboxConsumable_Click);
+            this.CheckboxConsumable.Click += new System.EventHandler(this.CheckboxItemType_Click);
             // 
             // groupBox4
             // 
@@ -502,8 +474,8 @@
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.ButtonSeletectAll, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.ButtonUnSelectAll, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.ButtonSeletectAll, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.ButtonUnSelectAll, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 503);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -515,21 +487,22 @@
             // 
             // ButtonSeletectAll
             // 
-            this.ButtonSeletectAll.Location = new System.Drawing.Point(3, 3);
+            this.ButtonSeletectAll.Location = new System.Drawing.Point(75, 3);
             this.ButtonSeletectAll.Name = "ButtonSeletectAll";
             this.ButtonSeletectAll.Size = new System.Drawing.Size(66, 23);
             this.ButtonSeletectAll.TabIndex = 0;
-            this.ButtonSeletectAll.Text = "全選";
+            this.ButtonSeletectAll.Text = "全選(隱藏)";
             this.ButtonSeletectAll.UseVisualStyleBackColor = true;
+            this.ButtonSeletectAll.Visible = false;
             this.ButtonSeletectAll.Click += new System.EventHandler(this.ButtonSeletectAll_Click);
             // 
             // ButtonUnSelectAll
             // 
-            this.ButtonUnSelectAll.Location = new System.Drawing.Point(75, 3);
+            this.ButtonUnSelectAll.Location = new System.Drawing.Point(3, 3);
             this.ButtonUnSelectAll.Name = "ButtonUnSelectAll";
             this.ButtonUnSelectAll.Size = new System.Drawing.Size(66, 23);
             this.ButtonUnSelectAll.TabIndex = 1;
-            this.ButtonUnSelectAll.Text = "全不選";
+            this.ButtonUnSelectAll.Text = "重置";
             this.ButtonUnSelectAll.UseVisualStyleBackColor = true;
             this.ButtonUnSelectAll.Click += new System.EventHandler(this.ButtonUnSelectAll_Click);
             // 
@@ -544,6 +517,15 @@
             this.panel1.Size = new System.Drawing.Size(717, 34);
             this.panel1.TabIndex = 7;
             // 
+            // TextBoxItemName
+            // 
+            this.TextBoxItemName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.TextBoxItemName.Location = new System.Drawing.Point(106, 4);
+            this.TextBoxItemName.Name = "TextBoxItemName";
+            this.TextBoxItemName.Size = new System.Drawing.Size(247, 27);
+            this.TextBoxItemName.TabIndex = 1;
+            this.TextBoxItemName.TextChanged += new System.EventHandler(this.TextBoxItemName_TextChanged);
+            // 
             // LabelItemName
             // 
             this.LabelItemName.AutoSize = true;
@@ -553,15 +535,6 @@
             this.LabelItemName.Size = new System.Drawing.Size(76, 16);
             this.LabelItemName.TabIndex = 0;
             this.LabelItemName.Text = "物品名稱:";
-            // 
-            // TextBoxItemName
-            // 
-            this.TextBoxItemName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.TextBoxItemName.Location = new System.Drawing.Point(106, 4);
-            this.TextBoxItemName.Name = "TextBoxItemName";
-            this.TextBoxItemName.Size = new System.Drawing.Size(247, 27);
-            this.TextBoxItemName.TabIndex = 1;
-            this.TextBoxItemName.TextChanged += new System.EventHandler(this.TextBoxItemName_TextChanged);
             // 
             // ItemPicker
             // 

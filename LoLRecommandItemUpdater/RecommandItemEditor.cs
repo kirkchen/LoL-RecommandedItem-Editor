@@ -73,6 +73,9 @@ namespace LoLRecommandItemUpdater
                                       { 5 , null },
                                       { 6 , null },
                                   };
+
+            // 設定初始地圖為一般
+            this.m_itemPicker.FilterMapType = MapType.Classic;
         }
 
         /// <summary>
@@ -362,9 +365,13 @@ namespace LoLRecommandItemUpdater
             }
 
             var outputFolder = Path.GetDirectoryName(outputPath);
+            var classicFile = Path.Combine(outputFolder, "RecItemsCLASSIC.ini");
+            var dominionFile = Path.Combine(outputFolder, "RecItemsODIN.ini");
             if (Directory.Exists(outputFolder))
             {
-                Directory.Delete(outputFolder, true);
+                File.Delete(classicFile);
+                File.Delete(dominionFile);                
+                
                 MessageBox.Show("已刪除該英雄的設定檔", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.ResetRecommandItem();
@@ -490,6 +497,7 @@ namespace LoLRecommandItemUpdater
         {
             if (this.SelectedHero == null)
             {
+                MessageBox.Show("請先選擇欲讀取設定檔之英雄", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

@@ -90,6 +90,10 @@ namespace LoLRecommandItemUpdater
         private void ItemPicker_Load(object sender, EventArgs e)
         {
             this.DisplayItems();
+
+            this.ResetSelectedPicture();
+
+            this.SeletectedItem = null;
         }
 
         /// <summary>
@@ -169,7 +173,7 @@ namespace LoLRecommandItemUpdater
             this.CheckboxMovement.Checked = false;
             this.CheckboxConsumable.Checked = false;
 
-            this.FilterItemType = ItemType.None;
+            this.FilterItemType = ItemType.All;
 
             this.DisplayItems();
         }
@@ -186,148 +190,17 @@ namespace LoLRecommandItemUpdater
             this.DisplayItems();
         }
 
-        #region Checkbox ItemGroup Clicked
-
         /// <summary>
-        /// Handles the Click event of the CheckboxHealth control.
+        /// Handles the Click event of the CheckboxItemType control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxHealth_Click(object sender, EventArgs e)
+        private void CheckboxItemType_Click(object sender, EventArgs e)
         {
-            this.SwitchDisplayItemType(this.CheckboxHealth, ItemType.Health);
-        }
+            this.SwitchFilterItemType();
 
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxArmor control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxArmor_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxArmor, ItemType.Armor);
+            this.DisplayItems();
         }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxHealthRegen control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxHealthRegen_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxHealthRegen, ItemType.HealthRegen);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxMagicResist control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxMagicResist_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxMagicResist, ItemType.MagicResist);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxDamage control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxDamage_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxDamage, ItemType.Damage);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxCriticalStrike control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxCriticalStrike_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxCriticalStrike, ItemType.CriticalStrike);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxAttackSpeed control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxAttackSpeed_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxAttackSpeed, ItemType.AttackSpeed);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxLifeSteal control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxLifeSteal_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxLifeSteal, ItemType.LifeSteal);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxSpellDamage control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxSpellDamage_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxSpellDamage, ItemType.SpellDamage);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxCooldownReduction control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxCooldownReduction_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxCooldownReduction, ItemType.CooldownReduction);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxMana control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxMana_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxMana, ItemType.Mana);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxManaRegen control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxManaRegen_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxManaRegen, ItemType.ManaRegen);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxMovement control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxMovement_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxMovement, ItemType.Movement);
-        }
-
-        /// <summary>
-        /// Handles the CheckedChanged event of the CheckboxConsumable control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
-        private void CheckboxConsumable_Click(object sender, EventArgs e)
-        {
-            this.SwitchDisplayItemType(this.CheckboxConsumable, ItemType.Consumable);
-        }
-        #endregion
 
         /// <summary>
         /// Handles the Click event of the itemPicture control.
@@ -336,15 +209,10 @@ namespace LoLRecommandItemUpdater
         /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
         private void ItemPicture_Click(object sender, EventArgs e)
         {
-            // Highlight選取的圖片
-            foreach (var control in this.FlowLayoutPanelItems.Controls)
-            {
-                if (control is PictureBox)
-                {
-                    (control as PictureBox).BackColor = Color.Transparent;
-                }
-            }
+            // 恢復所有圖片為未選取
+            this.ResetSelectedPicture();
 
+            // Highlight選取的圖片
             var itemPicture = sender as PictureBox;
             itemPicture.BackColor = Color.Red;
 
@@ -354,11 +222,25 @@ namespace LoLRecommandItemUpdater
         }
 
         /// <summary>
+        /// Resets the selected picture.
+        /// </summary>
+        private void ResetSelectedPicture()
+        {
+            foreach (var control in this.FlowLayoutPanelItems.Controls)
+            {
+                if (control is PictureBox)
+                {
+                    (control as PictureBox).BackColor = Color.Transparent;
+                }
+            }
+        }
+
+        /// <summary>
         /// Displays the items.
         /// </summary>
         /// <param name="result">The result.</param>
         private void DisplayItems()
-        {
+        {            
             // 取得物品資料
             var result = this.m_dataRepository.GetItemsByType(this.FilterMapType, this.FilterItemType, this.FilterKeyword);
 
@@ -395,25 +277,34 @@ namespace LoLRecommandItemUpdater
                     control.Visible = result.Where(i => i.Code.ToString() == control.Name).Count() > 0;
                 }
             }
-        }
+        }       
 
         /// <summary>
-        /// Switches the type of the item.
+        /// Switches the type of the filter item.
         /// </summary>
-        /// <param name="checkbox">The checkbox.</param>
-        /// <param name="itemType">Type of the item.</param>
-        private void SwitchDisplayItemType(CheckBox checkbox, ItemType itemType)
+        private void SwitchFilterItemType()
         {
-            if (checkbox.Checked)
-            {
-                this.FilterItemType = this.FilterItemType | itemType;
-            }
-            else
-            {
-                this.FilterItemType = this.FilterItemType ^ itemType;
-            }
+            this.FilterItemType = ItemType.None;
 
-            this.DisplayItems();
+            this.FilterItemType = this.CheckboxHealth.Checked ? this.FilterItemType | ItemType.Health : this.FilterItemType;
+            this.FilterItemType = this.CheckboxArmor.Checked ? this.FilterItemType | ItemType.Armor : this.FilterItemType;
+            this.FilterItemType = this.CheckboxHealthRegen.Checked ? this.FilterItemType | ItemType.HealthRegen : this.FilterItemType;
+            this.FilterItemType = this.CheckboxMagicResist.Checked ? this.FilterItemType | ItemType.MagicResist : this.FilterItemType;
+            this.FilterItemType = this.CheckboxDamage.Checked ? this.FilterItemType | ItemType.Damage : this.FilterItemType;
+            this.FilterItemType = this.CheckboxCriticalStrike.Checked ? this.FilterItemType | ItemType.CriticalStrike : this.FilterItemType;
+            this.FilterItemType = this.CheckboxAttackSpeed.Checked ? this.FilterItemType | ItemType.AttackSpeed : this.FilterItemType;
+            this.FilterItemType = this.CheckboxSpellDamage.Checked ? this.FilterItemType | ItemType.SpellDamage : this.FilterItemType;
+            this.FilterItemType = this.CheckboxCooldownReduction.Checked ? this.FilterItemType | ItemType.CooldownReduction : this.FilterItemType;
+            this.FilterItemType = this.CheckboxMana.Checked ? this.FilterItemType | ItemType.Mana : this.FilterItemType;
+            this.FilterItemType = this.CheckboxManaRegen.Checked ? this.FilterItemType | ItemType.ManaRegen : this.FilterItemType;
+            this.FilterItemType = this.CheckboxMovement.Checked ? this.FilterItemType | ItemType.Movement : this.FilterItemType;
+            this.FilterItemType = this.CheckboxConsumable.Checked ? this.FilterItemType | ItemType.Consumable : this.FilterItemType;
+
+            // 若全部未選取, 視為全部選取
+            if (this.FilterItemType == ItemType.None)
+            {
+                this.FilterItemType = ItemType.All;
+            }
         }
     }
 }
