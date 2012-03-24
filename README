@@ -1,10 +1,13 @@
 
 * 2012/03/24 - version v1.0.1203.2401 - bug fix - by Kirk
 
+Release v1.0.1203.2401 Version.
+
 Feature:
 1. 將Image, Data 加入專案, 移除Setup Project圖檔, 改由ProjectOutput讀取
 2. 更名 item_cost.txt => item_cost.ini
 3. 安裝包中文化, 修正產品名稱
+4. 新增Menu Bar, 修改About Wording
 
 Bugs fix:
 1. 修正一開始選擇道具會顯示所有地圖的道具 => 預設為召喚峽谷
