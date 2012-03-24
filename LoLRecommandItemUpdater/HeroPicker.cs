@@ -116,24 +116,24 @@ namespace LoLRecommandItemUpdater
 
             if (this.FlowLayoutPanelHero.Controls.Count == 0)
             {
-                foreach (var item in result)
+                foreach (var hero in result)
                 {
-                    PictureBox itemPicture = new PictureBox();
-                    itemPicture.Name = item.Name.ToString();
-                    itemPicture.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImageRootFolder() + item.Name + ".jpg");
-                    itemPicture.Size = new Size(80, 80);
-                    itemPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                    itemPicture.Click += new EventHandler(ItemPicture_Click);
-                    itemPicture.Padding = new Padding(5);
-                    itemPicture.SizeMode = PictureBoxSizeMode.StretchImage;
-                    itemPicture.BorderStyle = BorderStyle.None;
+                    PictureBox heroPicture = new PictureBox();
+                    heroPicture.Name = hero.Name.ToString();
+                    heroPicture.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImagePath(hero.Name));
+                    heroPicture.Size = new Size(80, 80);
+                    heroPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+                    heroPicture.Click += new EventHandler(ItemPicture_Click);
+                    heroPicture.Padding = new Padding(5);
+                    heroPicture.SizeMode = PictureBoxSizeMode.StretchImage;
+                    heroPicture.BorderStyle = BorderStyle.None;
 
                     ToolTip tip = new ToolTip();
-                    tip.SetToolTip(itemPicture, item.ChineseName);
+                    tip.SetToolTip(heroPicture, hero.ChineseName);
 
-                    this.FlowLayoutPanelHero.Controls.Add(itemPicture);
+                    this.FlowLayoutPanelHero.Controls.Add(heroPicture);
 
-                    this.ComboBoxHeroName.AutoCompleteCustomSource.Add(item.ChineseName);                    
+                    this.ComboBoxHeroName.AutoCompleteCustomSource.Add(hero.ChineseName);
                 }
 
                 this.ComboBoxHeroName.AutoCompleteSource = AutoCompleteSource.CustomSource;
@@ -153,6 +153,6 @@ namespace LoLRecommandItemUpdater
         private void ItemPicture_Click(object sender, EventArgs e)
         {
             this.ComboBoxHeroName.SelectedValue = (sender as Control).Name;
-        }        
+        }
     }
 }

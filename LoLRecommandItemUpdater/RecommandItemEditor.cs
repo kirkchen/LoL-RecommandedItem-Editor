@@ -135,7 +135,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
+                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(item.Code));
                 this.RecommandItems[1] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -154,7 +154,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
+                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(item.Code));
                 this.RecommandItems[2] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -173,7 +173,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
+                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(item.Code));
                 this.RecommandItems[3] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -192,7 +192,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
+                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(item.Code));
                 this.RecommandItems[4] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -211,7 +211,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
+                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(item.Code));
                 this.RecommandItems[5] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -230,7 +230,7 @@ namespace LoLRecommandItemUpdater
             var item = this.m_itemPicker.SeletectedItem;
             if (item != null)
             {
-                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + item.Code + ".gif");
+                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(item.Code));
                 this.RecommandItems[6] = item;
 
                 this.DisplayRecommandItemsPrice();
@@ -402,13 +402,13 @@ namespace LoLRecommandItemUpdater
         {
             if (this.SelectedHero != null)
             {
-                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImageRootFolder() + this.SelectedHero.Name + ".jpg");
+                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImagePath(this.SelectedHero.Name));
 
                 this.LabelHeroName.Text = this.SelectedHero.ChineseName;
             }
             else
             {
-                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetHeroImageRootFolder() + "Empty.jpg");
+                this.PictureBoxHero.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultHeroImagePath());
 
                 this.LabelHeroName.Text = "尚未選擇";
             }
@@ -440,12 +440,12 @@ namespace LoLRecommandItemUpdater
                                       { 6 , null },
                                   };
 
-            this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ;
-            this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
-            this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
-            this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
-            this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
-            this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + "----.gif"); ; ;
+            this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
+            this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
+            this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
+            this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
+            this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
+            this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetDefaultItemImagePath());
         }
 
         /// <summary>
@@ -525,12 +525,12 @@ namespace LoLRecommandItemUpdater
 
             if (this.RecommandItems.Where(i => i.Value == null).Count() == 0)
             {
-                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[1].Code + ".gif");
-                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[2].Code + ".gif");
-                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[3].Code + ".gif");
-                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[4].Code + ".gif");
-                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[5].Code + ".gif");
-                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImageRootFolder() + this.RecommandItems[6].Code + ".gif");
+                this.PictureBoxRecItem1.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(this.RecommandItems[1].Code));
+                this.PictureBoxRecItem2.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(this.RecommandItems[2].Code));
+                this.PictureBoxRecItem3.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(this.RecommandItems[3].Code));
+                this.PictureBoxRecItem4.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(this.RecommandItems[4].Code));
+                this.PictureBoxRecItem5.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(this.RecommandItems[5].Code));
+                this.PictureBoxRecItem6.Image = Image.FromFile(Application.StartupPath + FileRouteRepository.GetItemImagePath(this.RecommandItems[6].Code));
 
                 this.DisplayRecommandItemsPrice();
             }
@@ -584,6 +584,6 @@ namespace LoLRecommandItemUpdater
             var fileName = this.RadioButtonClassic.Checked ? "RecItemsCLASSIC.ini" : "RecItemsODIN.ini";
             var outputPath = string.Format("{0}\\{1}\\{2}", rootFolder, this.SelectedHero.Name, fileName);
             return outputPath;
-        }        
+        }
     }
 }

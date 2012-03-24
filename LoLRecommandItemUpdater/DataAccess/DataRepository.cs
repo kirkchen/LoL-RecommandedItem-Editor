@@ -31,7 +31,7 @@ namespace LoLRecommandItemUpdater.DataAccess
         {
             if (this.m_items == null)
             {
-                var sourceDatas = File.ReadAllLines("item_cost.txt");
+                var sourceDatas = File.ReadAllLines(@"Data\item_cost.ini");
 
                 this.m_items = sourceDatas.Select(
                                                i =>
@@ -113,7 +113,7 @@ namespace LoLRecommandItemUpdater.DataAccess
         {
             if (this.m_heros == null)
             {
-                var sourceDatas = File.ReadAllLines("champs.ini");
+                var sourceDatas = File.ReadAllLines(@"Data\champs.ini");
 
                 this.m_heros = sourceDatas.Select(
                                                i =>
