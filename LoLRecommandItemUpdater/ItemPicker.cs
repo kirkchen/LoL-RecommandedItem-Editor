@@ -293,6 +293,7 @@ namespace LoLRecommandItemUpdater
             this.FilterItemType = this.CheckboxDamage.Checked ? this.FilterItemType | ItemType.Damage : this.FilterItemType;
             this.FilterItemType = this.CheckboxCriticalStrike.Checked ? this.FilterItemType | ItemType.CriticalStrike : this.FilterItemType;
             this.FilterItemType = this.CheckboxAttackSpeed.Checked ? this.FilterItemType | ItemType.AttackSpeed : this.FilterItemType;
+            this.FilterItemType = this.CheckboxLifeSteal.Checked ? this.FilterItemType | ItemType.LifeSteal : this.FilterItemType;
             this.FilterItemType = this.CheckboxSpellDamage.Checked ? this.FilterItemType | ItemType.SpellDamage : this.FilterItemType;
             this.FilterItemType = this.CheckboxCooldownReduction.Checked ? this.FilterItemType | ItemType.CooldownReduction : this.FilterItemType;
             this.FilterItemType = this.CheckboxMana.Checked ? this.FilterItemType | ItemType.Mana : this.FilterItemType;
